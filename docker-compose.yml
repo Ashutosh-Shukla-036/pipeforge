@@ -12,6 +12,7 @@ services:
       - "5432:5432" # host_port:container_port — lets you connect via pgAdmin or psql locally
     volumes:
       - postgres_data:/var/lib/postgresql # postgres 18 changed this path — persists DB data across container restarts
+      - ./api/migrations/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
       # docker waits for postgres to be READY before starting api/worker
       test: [ "CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB" ]
