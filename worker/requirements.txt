@@ -1,0 +1,3 @@
+asyncpg==0.30.0           # async postgres driver
+redis==5.2.1              # redis client — pulls jobs from queue
+python-dotenv==1.0.1      # loads .env file

@@ -1,0 +1,7 @@
+fastapi==0.115.6          # web framework
+uvicorn==0.32.1           # ASGI server that runs fastapi
+asyncpg==0.30.0           # async postgres driver (faster than psycopg2 for async code)
+redis==5.2.1              # redis client for Python
+python-dotenv==1.0.1      # loads .env file into environment variables
+websockets==14.1          # WebSocket support
+httpx==0.28.1             # async HTTP client (useful for testing)
